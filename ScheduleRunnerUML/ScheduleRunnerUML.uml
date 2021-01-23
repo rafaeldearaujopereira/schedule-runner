@@ -30,8 +30,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Ho-GgFwlEeubG7YokSfdeQ" name="ScheduleItem">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ok8ksFwmEeubG7YokSfdeQ" name="process" type="_VPPu8FwlEeubG7YokSfdeQ" association="_Ok5hYFwmEeubG7YokSfdeQ">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ho-GgFwlEeubG7YokSfdeQ" name="Activity">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ok8ksFwmEeubG7YokSfdeQ" type="_VPPu8FwlEeubG7YokSfdeQ" association="_Ok5hYFwmEeubG7YokSfdeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ok9LwFwmEeubG7YokSfdeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ok9LwVwmEeubG7YokSfdeQ" value="1"/>
       </ownedAttribute>
@@ -61,7 +61,7 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ok5hYVwmEeubG7YokSfdeQ" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ok5hYlwmEeubG7YokSfdeQ" key="nature" value="UML_Nature"/>
       </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_Ok9y0FwmEeubG7YokSfdeQ" name="scheduleitem" type="_Ho-GgFwlEeubG7YokSfdeQ" association="_Ok5hYFwmEeubG7YokSfdeQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Ok9y0FwmEeubG7YokSfdeQ" type="_Ho-GgFwlEeubG7YokSfdeQ" association="_Ok5hYFwmEeubG7YokSfdeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_1nNC0FwnEeubG7YokSfdeQ" name="ScheduleOwnership">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_41KMkFwnEeubG7YokSfdeQ" name="PUBLIC, PRIVATE, ROLE"/>
@@ -121,7 +121,15 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_aFoc0FwqEeubG7YokSfdeQ" client="_A-GXsFwqEeubG7YokSfdeQ" supplier="_OxWhoFwpEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_obSTwFwqEeubG7YokSfdeQ" name="Run"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_qi3rUFwqEeubG7YokSfdeQ" name="ScheduleRunner"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qi3rUFwqEeubG7YokSfdeQ" name="ScheduleRunner">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OvJCcFzqEeuTWeG0CGc_KQ" name="schedules">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XhsdMFzqEeuTWeG0CGc_KQ" name="loadSchedules"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hxhHMFzqEeuTWeG0CGc_KQ" name="run">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hxhHMVzqEeuTWeG0CGc_KQ" name="s" type="_FKAwwFwlEeubG7YokSfdeQ"/>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_t-9-wFwqEeubG7YokSfdeQ" client="_qi3rUFwqEeubG7YokSfdeQ" supplier="_FKAwwFwlEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_vfc6EFwqEeubG7YokSfdeQ" client="_qi3rUFwqEeubG7YokSfdeQ" supplier="_obSTwFwqEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_zhaToFwqEeubG7YokSfdeQ" client="_obSTwFwqEeubG7YokSfdeQ" supplier="_FKAwwFwlEeubG7YokSfdeQ"/>

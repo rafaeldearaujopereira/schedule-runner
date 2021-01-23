@@ -321,12 +321,24 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_qi9K5FwqEeubG7YokSfdeQ" y="15"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_qi9K5VwqEeubG7YokSfdeQ" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_RuwOMFzqEeuTWeG0CGc_KQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="ScheduleRunnerUML.uml#_OvJCcFzqEeuTWeG0CGc_KQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RuwOMVzqEeuTWeG0CGc_KQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_qi9K5lwqEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_qi9K51wqEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_qi9K6FwqEeubG7YokSfdeQ"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qi9K6VwqEeubG7YokSfdeQ"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_qi9K6lwqEeubG7YokSfdeQ" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_Ye6TYFzqEeuTWeG0CGc_KQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="ScheduleRunnerUML.uml#_XhsdMFzqEeuTWeG0CGc_KQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ye6TYVzqEeuTWeG0CGc_KQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_i77E0FzqEeuTWeG0CGc_KQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="ScheduleRunnerUML.uml#_hxhHMFzqEeuTWeG0CGc_KQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_i77E0VzqEeuTWeG0CGc_KQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_qi9K61wqEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_qi9K7FwqEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_qi9K7VwqEeubG7YokSfdeQ"/>
