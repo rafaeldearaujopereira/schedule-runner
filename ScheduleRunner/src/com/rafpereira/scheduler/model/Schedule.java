@@ -13,13 +13,22 @@ import javax.persistence.ManyToOne;
  */
 public class Schedule {
 
+	/**
+	 * Id of the schedule (in the database).
+	 */
 	@Id
 	@Column(name = "id")
 	private Long id;
 
+	/**
+	 * Name of the schedule.
+	 */
 	@Column(name = "name")
 	private String name;
 
+	/**
+	 * Description of the schedule.
+	 */
 	@Column(name = "description")
 	private String description;
 
