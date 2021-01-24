@@ -45,14 +45,25 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TZ8aMFwlEeubG7YokSfdeQ" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_VPPu8FwlEeubG7YokSfdeQ" name="Process"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VPPu8FwlEeubG7YokSfdeQ" name="Process">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LGGv0F5WEeuTWeG0CGc_KQ" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VgkjkF5WEeuTWeG0CGc_KQ" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Xz_XsF5WEeuTWeG0CGc_KQ" type="_vfDUQF5VEeuTWeG0CGc_KQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KC4i0F5XEeuTWeG0CGc_KQ" name="description">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_e80AcFwlEeubG7YokSfdeQ" client="_Ho-GgFwlEeubG7YokSfdeQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_8Cdg8FwlEeubG7YokSfdeQ" memberEnd="_8Cf9MFwlEeubG7YokSfdeQ _8CgkQFwlEeubG7YokSfdeQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8CfWIFwlEeubG7YokSfdeQ" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8CfWIVwlEeubG7YokSfdeQ" key="nature" value="UML_Nature"/>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_8CgkQFwlEeubG7YokSfdeQ" type="_VPPu8FwlEeubG7YokSfdeQ" association="_8Cdg8FwlEeubG7YokSfdeQ"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_8Cf9MFwlEeubG7YokSfdeQ" name="childs" type="_VPPu8FwlEeubG7YokSfdeQ" association="_8Cdg8FwlEeubG7YokSfdeQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8Cf9MFwlEeubG7YokSfdeQ" name="children" type="_VPPu8FwlEeubG7YokSfdeQ" association="_8Cdg8FwlEeubG7YokSfdeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8Cf9MVwlEeubG7YokSfdeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8Cf9MlwlEeubG7YokSfdeQ" value="*"/>
       </ownedEnd>
@@ -89,6 +100,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_suo0wFwpEeubG7YokSfdeQ" name="defaultValue">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__oh5QF5VEeuTWeG0CGc_KQ" type="_VPPu8FwlEeubG7YokSfdeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_SwCkwFwpEeubG7YokSfdeQ" memberEnd="_SwDL0lwpEeubG7YokSfdeQ _SwDy4lwpEeubG7YokSfdeQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SwDL0FwpEeubG7YokSfdeQ" source="org.eclipse.papyrus">
@@ -108,6 +120,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_QUONIFwqEeubG7YokSfdeQ" name="value">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d5UMoF5VEeuTWeG0CGc_KQ" type="_Ho-GgFwlEeubG7YokSfdeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_UqY8IFwqEeubG7YokSfdeQ" memberEnd="_UqaKQFwqEeubG7YokSfdeQ _UqaKQ1wqEeubG7YokSfdeQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UqY8IVwqEeubG7YokSfdeQ" source="org.eclipse.papyrus">
@@ -149,5 +162,9 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_lwMKAFwrEeubG7YokSfdeQ" client="_UOM58FwrEeubG7YokSfdeQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_vfDUQF5VEeuTWeG0CGc_KQ" name="ProcessType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xkmrgF5VEeuTWeG0CGc_KQ" name="JAVA, FILESYSTEM, COMMANDLINE, GROUP"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_5lR9YF5VEeuTWeG0CGc_KQ" client="_VPPu8FwlEeubG7YokSfdeQ" supplier="_vfDUQF5VEeuTWeG0CGc_KQ"/>
   </packagedElement>
 </uml:Model>
