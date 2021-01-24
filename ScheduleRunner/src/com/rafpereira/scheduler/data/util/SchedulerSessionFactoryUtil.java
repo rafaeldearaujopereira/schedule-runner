@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 import com.rafpereira.data.util.SessionFactoryUtil;
+import com.rafpereira.scheduler.model.ProcessType;
 import com.rafpereira.scheduler.model.ScheduleOwnership;
 
 public class SchedulerSessionFactoryUtil extends SessionFactoryUtil {
@@ -48,6 +49,7 @@ public class SchedulerSessionFactoryUtil extends SessionFactoryUtil {
 		Configuration config = new Configuration();
 		config.configure("/com/rafpereira/scheduler/config/hibernate.cfg.xml");
 		config.addAnnotatedClass(ScheduleOwnership.class);
+		config.addAnnotatedClass(ProcessType.class);
 		return config;
 	}
 
