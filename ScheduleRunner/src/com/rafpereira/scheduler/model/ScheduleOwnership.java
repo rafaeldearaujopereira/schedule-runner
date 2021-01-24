@@ -1,14 +1,19 @@
 package com.rafpereira.scheduler.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
- * Defines the ownership of a given schedule.
- * The ownership defines who can run, and change the configuration of a schedule.
+ * Defines the ownership of a given schedule. The ownership defines who can run,
+ * and change the configuration of a schedule.
  * 
  * @author rafaeldearaujopereira
  */
+
+@Entity
+@Table(name = "schedule_ownership")
 public class ScheduleOwnership {
 
 	public static final ScheduleOwnership PUBLIC = new ScheduleOwnership();
@@ -50,6 +55,4 @@ public class ScheduleOwnership {
 		this.description = description;
 	}
 
-
-	
 }
