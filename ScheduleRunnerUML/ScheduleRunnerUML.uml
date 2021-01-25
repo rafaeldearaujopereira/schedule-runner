@@ -4,14 +4,19 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_kg-pEFwkEeubG7YokSfdeQ" name="Model">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_kUhsAFwlEeubG7YokSfdeQ" annotatedElement="_e80AcFwlEeubG7YokSfdeQ">
-      <body>A schedule item can be configure to depends on the successful end of two or more other items.</body>
-    </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_6-L5IFwoEeubG7YokSfdeQ" annotatedElement="_czh4YFwoEeubG7YokSfdeQ">
       <body>Initially, it must identity that the process has ended OK.</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_cqGksFwqEeubG7YokSfdeQ" annotatedElement="_ZekHsFwoEeubG7YokSfdeQ">
       <body>Copy, delete, move files or directories.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_nINocF9CEeuTWeG0CGc_KQ" annotatedElement="_fjUToF9CEeuTWeG0CGc_KQ">
+      <body>Maps the dependency tree of a activity.&#xD;
+Which other activities must be &quot;done&quot; before the current one be started.&#xD;
+A schedule item (activity or phase) can be configure to depends on the successful end of two or more other items.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_fVObAF9HEeuTWeG0CGc_KQ" annotatedElement="_GRNoIF9AEeuTWeG0CGc_KQ">
+      <body>This relationship will be mapped as a many-to-many Hibernate join, and thus, there won't be a implementation of this class.</body>
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_FKAwwFwlEeubG7YokSfdeQ" name="Schedule">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_T80oUFwmEeubG7YokSfdeQ" name="id">
@@ -23,17 +28,38 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Y3l5MFwmEeubG7YokSfdeQ" name="description">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Xd1bgFwnEeubG7YokSfdeQ" name="ownerLogin">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Xd1bgFwnEeubG7YokSfdeQ" name="ownerId">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_zjEn4FwnEeubG7YokSfdeQ" name="flagOwnership">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sWdJwF9UEeuTWeG0CGc_KQ" name="roleId">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Ho-GgFwlEeubG7YokSfdeQ" name="Activity">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Ok8ksFwmEeubG7YokSfdeQ" type="_VPPu8FwlEeubG7YokSfdeQ" association="_Ok5hYFwmEeubG7YokSfdeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ok9LwFwmEeubG7YokSfdeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ok9LwVwmEeubG7YokSfdeQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wfDDsF88EeuTWeG0CGc_KQ" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_S7oMoF89EeuTWeG0CGc_KQ" name="startTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nMEnAF89EeuTWeG0CGc_KQ" name="endTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0vH8UF89EeuTWeG0CGc_KQ" name="repeatInterval">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigInteger"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WnSEYF9QEeuTWeG0CGc_KQ" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dwC20F9QEeuTWeG0CGc_KQ" name="description">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_Ku9AAFwlEeubG7YokSfdeQ" memberEnd="_KvDtsFwlEeubG7YokSfdeQ _KvImMlwlEeubG7YokSfdeQ">
@@ -58,7 +84,6 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_fSTaMF6UEeuTWeG0CGc_KQ" name="parent" type="_VPPu8FwlEeubG7YokSfdeQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_e80AcFwlEeubG7YokSfdeQ" client="_Ho-GgFwlEeubG7YokSfdeQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_8Cdg8FwlEeubG7YokSfdeQ" memberEnd="_8Cf9MFwlEeubG7YokSfdeQ _8CgkQFwlEeubG7YokSfdeQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8CfWIFwlEeubG7YokSfdeQ" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8CfWIVwlEeubG7YokSfdeQ" key="nature" value="UML_Nature"/>
@@ -78,7 +103,7 @@
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_1nNC0FwnEeubG7YokSfdeQ" name="ScheduleOwnership">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_41KMkFwnEeubG7YokSfdeQ" name="PUBLIC, PRIVATE, ROLE"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_KyetwFwoEeubG7YokSfdeQ" client="_FKAwwFwlEeubG7YokSfdeQ" supplier="_1nNC0FwnEeubG7YokSfdeQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_KyetwFwoEeubG7YokSfdeQ" client="_FKAwwFwlEeubG7YokSfdeQ" supplier="_41KMkFwnEeubG7YokSfdeQ _kg-pEFwkEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ZekHsFwoEeubG7YokSfdeQ" name="FileSystemProcess">
       <generalization xmi:type="uml:Generalization" xmi:id="_iLUccFwoEeubG7YokSfdeQ" general="_VPPu8FwlEeubG7YokSfdeQ"/>
     </packagedElement>
@@ -153,7 +178,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_hxhHMVzqEeuTWeG0CGc_KQ" name="s" type="_FKAwwFwlEeubG7YokSfdeQ"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_t-9-wFwqEeubG7YokSfdeQ" client="_qi3rUFwqEeubG7YokSfdeQ" supplier="_FKAwwFwlEeubG7YokSfdeQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_t-9-wFwqEeubG7YokSfdeQ" client="_qi3rUFwqEeubG7YokSfdeQ" supplier="_kg-pEFwkEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_vfc6EFwqEeubG7YokSfdeQ" client="_qi3rUFwqEeubG7YokSfdeQ" supplier="_obSTwFwqEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_zhaToFwqEeubG7YokSfdeQ" client="_obSTwFwqEeubG7YokSfdeQ" supplier="_FKAwwFwlEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_-CuWQFwqEeubG7YokSfdeQ" name="RunStatus">
@@ -171,10 +196,34 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b3dxYFwrEeubG7YokSfdeQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_lwMKAFwrEeubG7YokSfdeQ" client="_UOM58FwrEeubG7YokSfdeQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_lwMKAFwrEeubG7YokSfdeQ" client="_UOM58FwrEeubG7YokSfdeQ" supplier="_kg-pEFwkEeubG7YokSfdeQ _Ok8ksFwmEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_vfDUQF5VEeuTWeG0CGc_KQ" name="ProcessType">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xkmrgF5VEeuTWeG0CGc_KQ" name="JAVA, FILESYSTEM, COMMANDLINE, GROUP"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_5lR9YF5VEeuTWeG0CGc_KQ" client="_VPPu8FwlEeubG7YokSfdeQ" supplier="_vfDUQF5VEeuTWeG0CGc_KQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GRNoIF9AEeuTWeG0CGc_KQ" name="ActivityDayOfWeek">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CwrrMF9BEeuTWeG0CGc_KQ" type="_Ho-GgFwlEeubG7YokSfdeQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GvoNAF9BEeuTWeG0CGc_KQ" type="_qhe8QF9AEeuTWeG0CGc_KQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RQR9wF9AEeuTWeG0CGc_KQ" memberEnd="_RQWPMF9AEeuTWeG0CGc_KQ _RQYrcF9AEeuTWeG0CGc_KQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RQTy8F9AEeuTWeG0CGc_KQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RQTy8V9AEeuTWeG0CGc_KQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RQYrcF9AEeuTWeG0CGc_KQ" type="_Ho-GgFwlEeubG7YokSfdeQ" association="_RQR9wF9AEeuTWeG0CGc_KQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RQWPMF9AEeuTWeG0CGc_KQ" type="_GRNoIF9AEeuTWeG0CGc_KQ" aggregation="shared" association="_RQR9wF9AEeuTWeG0CGc_KQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RQW2QF9AEeuTWeG0CGc_KQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RQYEYF9AEeuTWeG0CGc_KQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_qhe8QF9AEeuTWeG0CGc_KQ" name="DayOfWeek">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_srhK4F9AEeuTWeG0CGc_KQ" name="SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_5yzKMF9AEeuTWeG0CGc_KQ" client="_GRNoIF9AEeuTWeG0CGc_KQ" supplier="_qhe8QF9AEeuTWeG0CGc_KQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fjUToF9CEeuTWeG0CGc_KQ" name="ActivityDependency">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JZTTEF9DEeuTWeG0CGc_KQ" name="activity" type="_Ho-GgFwlEeubG7YokSfdeQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NhyycF9DEeuTWeG0CGc_KQ" name="dependency" type="_Ho-GgFwlEeubG7YokSfdeQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_5eFzkF9CEeuTWeG0CGc_KQ" client="_fjUToF9CEeuTWeG0CGc_KQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_7NQEEF9CEeuTWeG0CGc_KQ" client="_fjUToF9CEeuTWeG0CGc_KQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
   </packagedElement>
 </uml:Model>
