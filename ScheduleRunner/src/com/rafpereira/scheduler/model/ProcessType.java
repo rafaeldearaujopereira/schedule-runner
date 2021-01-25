@@ -33,16 +33,12 @@ public class ProcessType {
 		GROUP.setId(4L);
 	}
 
-	/**
-	 * Id of the type.
-	 */
+	/** Id of the type. */
 	@Id
 	@Column(name = "id")
 	private Long id;
 
-	/**
-	 * Description of the type.
-	 */
+	/** Description of the type. */
 	@Column(name = "description")
 	private String description;
 

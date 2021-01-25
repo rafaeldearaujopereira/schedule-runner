@@ -36,7 +36,20 @@ alter table process add constraint process_fk_parent foreign key (parent_id) ref
 
 
 
+create table process_parameter (
+id bigint not null,
+name varchar(60) not null,
+description varchar(200) null,
+default_value varchar(4000) null,
+process_id bigint not null,
+required boolean not null default false,
+editable boolean not null default true,
+multiple boolean not null default false
+);
 
+alter table process_parameter add constraint process_parameter_pk primary key (id);
+
+alter table process_parameter add constraint process_parameter_fk_process foreign key (process_id) references process (id);
 
 
 
@@ -45,3 +58,4 @@ alter table process add constraint process_fk_parent foreign key (parent_id) ref
 
 create sequence process_seq;
 
+create sequence process_parameter_seq;

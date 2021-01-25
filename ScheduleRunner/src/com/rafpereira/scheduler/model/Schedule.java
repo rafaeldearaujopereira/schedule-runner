@@ -14,22 +14,16 @@ import javax.persistence.ManyToOne;
  */
 public class Schedule {
 
-	/**
-	 * Id of the schedule (in the database).
-	 */
+	/** Id of the schedule. */
 	@Id
 	@Column(name = "id")
 	private Long id;
 
-	/**
-	 * Name of the schedule.
-	 */
+	/** Name of the schedule. */
 	@Column(name = "name")
 	private String name;
 
-	/**
-	 * Description of the schedule.
-	 */
+	/** Description of the schedule. */
 	@Column(name = "description")
 	private String description;
 
@@ -51,9 +45,7 @@ public class Schedule {
 	@Column(name = "roleId")
 	private Long roleId;
 
-	/**
-	 * The type of ownership of a given schedule.
-	 */
+	/** The type of ownership of a given schedule. */
 	@ManyToOne
 	@JoinColumn(name = "schedule_ownership_id", referencedColumnName = "schedule_ownership_id")
 	private ScheduleOwnership ownership;

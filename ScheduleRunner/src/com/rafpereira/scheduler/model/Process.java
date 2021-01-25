@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 /**
- * A process, an executable unit.
+ * A process, a command or an executable unit of logic.
  * 
  * @author rafaeldearaujopereira
  */
@@ -24,43 +24,38 @@ import javax.persistence.Transient;
 @Table(name = "process")
 public class Process {
 
-	/**
-	 * Id of the process.
-	 */
+	/** Id of the process. */
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "processSeqGen")
 	@SequenceGenerator(name = "processSeqGen", allocationSize = 1, sequenceName = "process_seq")
 	private Long id;
 
-	/**
-	 * Name of the process.
-	 */
+	/** Name of the process. */
 	@Column(name = "name")
 	private String name;
 
-	/**
-	 * Description of the process.
-	 */
+	/** Description of the process. */
 	@Column(name = "description")
 	private String description;
 
-	/**
-	 * The type of the process.
-	 */
+	/** The type of the process. */
 	@ManyToOne
 	@JoinColumn(name = "process_type_id", referencedColumnName = "id")
 	private ProcessType type;
 
-	/**
-	 * The parent process (when exists).
-	 */
+	/** The parent process (when exists). */
 	@ManyToOne
 	@JoinColumn(name = "parent_id", referencedColumnName = "id")
 	private Process parent;
 
+	/** The children processes of the process (group processes). */
 	@Transient
 	private List<Process> children = new ArrayList<>();
+
+	/** The parameters of the process. */
+	@Transient
+	private List<ProcessParameter> parameters = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -108,6 +103,14 @@ public class Process {
 
 	public void setChildren(List<Process> children) {
 		this.children = children;
+	}
+
+	public List<ProcessParameter> getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(List<ProcessParameter> parameters) {
+		this.parameters = parameters;
 	}
 
 }
