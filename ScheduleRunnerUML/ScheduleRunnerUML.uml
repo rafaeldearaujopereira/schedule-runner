@@ -56,6 +56,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_KC4i0F5XEeuTWeG0CGc_KQ" name="description">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fSTaMF6UEeuTWeG0CGc_KQ" name="parent" type="_VPPu8FwlEeubG7YokSfdeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_e80AcFwlEeubG7YokSfdeQ" client="_Ho-GgFwlEeubG7YokSfdeQ" supplier="_Ho-GgFwlEeubG7YokSfdeQ"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_8Cdg8FwlEeubG7YokSfdeQ" memberEnd="_8Cf9MFwlEeubG7YokSfdeQ _8CgkQFwlEeubG7YokSfdeQ">

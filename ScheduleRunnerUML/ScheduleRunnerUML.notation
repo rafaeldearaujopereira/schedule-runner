@@ -94,6 +94,10 @@
         <element xmi:type="uml:Property" href="ScheduleRunnerUML.uml#_KC4i0F5XEeuTWeG0CGc_KQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_L8iMEV5XEeuTWeG0CGc_KQ"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_gG0nYF6UEeuTWeG0CGc_KQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="ScheduleRunnerUML.uml#_fSTaMF6UEeuTWeG0CGc_KQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gG0nYV6UEeuTWeG0CGc_KQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_VPRkJFwlEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_VPRkJVwlEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_VPRkJlwlEeubG7YokSfdeQ"/>
@@ -525,9 +529,9 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_8CyREVwlEeubG7YokSfdeQ"/>
     <element xmi:type="uml:Association" href="ScheduleRunnerUML.uml#_8Cdg8FwlEeubG7YokSfdeQ"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8CyRElwlEeubG7YokSfdeQ" points="[697, 569, -643984, -643984]$[740, 580, -643984, -643984]$[740, 640, -643984, -643984]$[677, 640, -643984, -643984]$[677, 619, -643984, -643984]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8Dc_cFwlEeubG7YokSfdeQ" id="(1.0,0.7194244604316546)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8DeNkFwlEeubG7YokSfdeQ" id="(0.8540145985401459,1.0)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8CyRElwlEeubG7YokSfdeQ" points="[697, 600, -643984, -643984]$[740, 600, -643984, -643984]$[740, 660, -643984, -643984]$[680, 660, -643984, -643984]$[680, 634, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8Dc_cFwlEeubG7YokSfdeQ" id="(1.0,0.7792207792207793)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8DeNkFwlEeubG7YokSfdeQ" id="(0.8759124087591241,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_OlLOMFwmEeubG7YokSfdeQ" type="Association_Edge" source="_HpDmEFwlEeubG7YokSfdeQ" target="_VPQ9EFwlEeubG7YokSfdeQ">
     <children xmi:type="notation:DecorationNode" xmi:id="_OlLOM1wmEeubG7YokSfdeQ" type="Association_StereotypeLabel">
