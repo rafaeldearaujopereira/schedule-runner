@@ -250,6 +250,10 @@
         <element xmi:type="uml:Property" href="ScheduleRunnerUML.uml#__oh5QF5VEeuTWeG0CGc_KQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Ar4MoV5WEeuTWeG0CGc_KQ"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_xNOBcF6xEeuTWeG0CGc_KQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="ScheduleRunnerUML.uml#_vo69IF6xEeuTWeG0CGc_KQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xNOBcV6xEeuTWeG0CGc_KQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_OxZk9lwpEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_OxZk91wpEeubG7YokSfdeQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_OxZk-FwpEeubG7YokSfdeQ"/>

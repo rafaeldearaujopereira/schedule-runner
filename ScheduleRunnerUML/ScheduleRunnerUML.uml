@@ -102,6 +102,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="__oh5QF5VEeuTWeG0CGc_KQ" type="_VPPu8FwlEeubG7YokSfdeQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vo69IF6xEeuTWeG0CGc_KQ" name="editable">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_SwCkwFwpEeubG7YokSfdeQ" memberEnd="_SwDL0lwpEeubG7YokSfdeQ _SwDy4lwpEeubG7YokSfdeQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SwDL0FwpEeubG7YokSfdeQ" source="org.eclipse.papyrus">
