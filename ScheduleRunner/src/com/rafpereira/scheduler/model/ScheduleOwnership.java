@@ -21,9 +21,9 @@ public class ScheduleOwnership {
 	public static final ScheduleOwnership ROLE = new ScheduleOwnership();
 
 	static {
-		PUBLIC.setId(1);
-		PRIVATE.setId(2);
-		ROLE.setId(3);
+		PUBLIC.setId(1L);
+		PRIVATE.setId(2L);
+		ROLE.setId(3L);
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class ScheduleOwnership {
 	 */
 	@Id
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 
 	/**
 	 * Description of the ownership.
@@ -39,11 +39,11 @@ public class ScheduleOwnership {
 	@Column(name = "description")
 	private String description;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

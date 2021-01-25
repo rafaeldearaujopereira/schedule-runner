@@ -14,16 +14,23 @@ import javax.persistence.Table;
 @Table(name = "process_type")
 public class ProcessType {
 
+	/** Java process. */
 	public static final ProcessType JAVA = new ProcessType();
+
+	/** File system process. */
 	public static final ProcessType FILE_SYSTEM = new ProcessType();
+
+	/** Command line process. */
 	public static final ProcessType COMMAND_LINE = new ProcessType();
+
+	/** Group (abstract) process. */
 	public static final ProcessType GROUP = new ProcessType();
 
 	static {
-		JAVA.setId(1);
-		FILE_SYSTEM.setId(2);
-		COMMAND_LINE.setId(3);
-		GROUP.setId(4);
+		JAVA.setId(1L);
+		FILE_SYSTEM.setId(2L);
+		COMMAND_LINE.setId(3L);
+		GROUP.setId(4L);
 	}
 
 	/**
@@ -31,7 +38,7 @@ public class ProcessType {
 	 */
 	@Id
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 
 	/**
 	 * Description of the type.
@@ -39,11 +46,11 @@ public class ProcessType {
 	@Column(name = "description")
 	private String description;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
