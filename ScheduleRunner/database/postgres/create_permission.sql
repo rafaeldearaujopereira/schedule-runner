@@ -6,6 +6,7 @@ grant select, insert, update, delete on process to schedrunner_user;
 
 grant select, insert, update, delete on process_parameter to schedrunner_user;
 
+grant select, insert, update, delete on day_of_week to schedrunner_user;
 
 
 

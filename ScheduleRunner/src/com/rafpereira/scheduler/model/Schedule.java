@@ -47,7 +47,7 @@ public class Schedule {
 
 	/** The type of ownership of a given schedule. */
 	@ManyToOne
-	@JoinColumn(name = "schedule_ownership_id", referencedColumnName = "schedule_ownership_id")
+	@JoinColumn(name = "schedule_ownership_id", referencedColumnName = "id")
 	private ScheduleOwnership ownership;
 
 	public Long getId() {

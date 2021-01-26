@@ -16,7 +16,6 @@ import javax.persistence.Transient;
 
 /**
  * A process, a command or an executable unit of logic.
- * 
  * @author rafaeldearaujopereira
  */
 

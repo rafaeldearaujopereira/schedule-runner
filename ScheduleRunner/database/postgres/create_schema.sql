@@ -54,8 +54,60 @@ alter table process_parameter add constraint process_parameter_fk_process foreig
 
 
 
+create table day_of_week (
+id smallint not null,
+description varchar(20) not null
+);
+
+alter table day_of_week add constraint day_of_week_pk primary key (id);
+
+alter table day_of_week add constraint day_of_week_uk_desc unique (description);
+
+
+
+create table schedule (
+id bigint not null,
+schedule_ownership_id smallint not null,
+owner_id bigint null,
+role_id bigint null,
+name varchar(60) not null,
+description varchar(200) not null
+);
+
+alter table schedule add constraint schedule_pk primary key (id);
+
+alter table schedule add constraint schedule_uk_name unique (name);
+
+alter table schedule add constraint schedule_fk_ownership foreign key (schedule_ownership_id) references schedule_ownership (id);
+
+
+
+
+
+create table activity (
+id bigint not null,
+process_id bigint not null,
+schedule_id bigint not null,
+name varchar(60) not null,
+description varchar(200) null,
+start_time varchar(8) not null,
+end_time varchar(8) null,
+repeat_interval bigint null
+);
+
+alter table activity add constraint activity_pk primary key (id);
+
+--alter table activity
+
+
+
+
 
 
 create sequence process_seq;
 
 create sequence process_parameter_seq;
+
+create sequence schedule_seq;
+
+create sequence activity_seq;
