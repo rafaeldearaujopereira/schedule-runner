@@ -3,16 +3,22 @@ package com.rafpereira.scheduler.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+import com.rafpereira.accesscontrol.model.Role;
 
 /**
  * An activity is a command (or a group of commands) set in a schedule. For
@@ -62,12 +68,22 @@ public class Activity {
 	/** Repeat interval (in milliseconds). */
 	@Column(name = "repeat_interval")
 	private Long repeatInterval;
-	
+
+	/** The days that the activity must be executed. */
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY)
+	@JoinTable(name = "activity_day", joinColumns = @JoinColumn(name = "activity_id"), inverseJoinColumns = @JoinColumn(name = "day_of_week_id"))
+	private List<DayOfWeek> days = new ArrayList<>();
 	
 	/** The list of activities that must be completed in order to execute the current one (dependencies). */
-	@Transient
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY)
+	@JoinTable(name = "activity_dependency", joinColumns = @JoinColumn(name = "dependency_activity_id"), inverseJoinColumns = @JoinColumn(name = "activity_id"))
 	private List<Activity> dependencies = new ArrayList<>();
 
+	/** The activities what depends on the current one. */
+	@ManyToMany(mappedBy = "dependencies")
+	private List<Activity> dependents = new ArrayList<>();
+
+	
 	/** The parameters set for the process behalf this activity. */
 	@Transient
 	private List<ConfiguredParameter> parameters = new ArrayList<>();
@@ -151,5 +167,15 @@ public class Activity {
 	public void setParameters(List<ConfiguredParameter> parameters) {
 		this.parameters = parameters;
 	}
+
+	public List<DayOfWeek> getDays() {
+		return days;
+	}
+
+	public void setDays(List<DayOfWeek> days) {
+		this.days = days;
+	}
+	
+	
 
 }

@@ -65,6 +65,9 @@ alter table day_of_week add constraint day_of_week_uk_desc unique (description);
 
 
 
+
+
+
 create table schedule (
 id bigint not null,
 schedule_ownership_id smallint not null,
@@ -119,6 +122,36 @@ alter table configured_parameter add constraint configured_parameter_uk_logic un
 alter table configured_parameter add constraint configured_parameter_fk_param foreign key (process_parameter_id) references process_parameter (id);
 
 alter table configured_parameter add constraint configured_parameter_fk_activity foreign key (activity_id) references activity (id);
+
+
+
+create table activity_day (
+activity_id bigint not null,
+day_of_week_id smallint not null
+);
+
+alter table activity_day add constraint activity_day_pk primary key (activity_id, day_of_week_id);
+
+alter table activity_day add constraint activity_day_fk_activity foreign key (activity_id) references activity (id);
+
+alter table activity_day add constraint activity_day_fk_day foreign key (day_of_week_id) references day_of_week (id);
+
+
+
+
+create table activity_dependency (
+activity_id bigint not null,
+dependency_activity_id bigint not null
+);
+
+alter table activity_dependency add constraint activity_dependency_pk primary key (activity_id, dependency_activity_id);
+
+alter table activity_dependency add constraint activity_dependency_ck_diff check (activity_id <> dependency_activity_id);
+
+alter table activity_dependency add constraint activity_dependency_fk_activity foreign key (activity_id) references activity (id);
+
+alter table activity_dependency add constraint activity_dependency_fk_dependency foreign key (dependency_activity_id) references activity (id);
+
 
 
 
