@@ -7,6 +7,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 import com.rafpereira.data.util.SessionFactoryUtil;
+import com.rafpereira.scheduler.model.Activity;
+import com.rafpereira.scheduler.model.ConfiguredParameter;
 import com.rafpereira.scheduler.model.DayOfWeek;
 import com.rafpereira.scheduler.model.Process;
 import com.rafpereira.scheduler.model.ProcessParameter;
@@ -58,6 +60,9 @@ public class SchedulerSessionFactoryUtil extends SessionFactoryUtil {
 		config.addAnnotatedClass(ProcessParameter.class);
 		config.addAnnotatedClass(DayOfWeek.class);
 		config.addAnnotatedClass(Schedule.class);
+		config.addAnnotatedClass(Activity.class);
+		config.addAnnotatedClass(ConfiguredParameter.class);
+		
 		return config;
 	}
 

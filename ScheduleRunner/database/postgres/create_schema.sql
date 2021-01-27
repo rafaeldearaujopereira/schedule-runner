@@ -97,8 +97,28 @@ repeat_interval bigint null
 
 alter table activity add constraint activity_pk primary key (id);
 
---alter table activity
+alter table activity add constraint activity_uk_name unique (schedule_id, name);
 
+alter table activity add constraint activity_fk_schedule foreign key (schedule_id) references schedule (id);
+
+alter table activity add constraint activity_fk_process foreign key (process_id) references process (id);
+
+
+
+create table configured_parameter (
+id bigint not null, 
+process_parameter_id bigint not null, 
+activity_id bigint not null,
+parameter_value varchar(4000) not null
+);
+
+alter table configured_parameter add constraint configured_parameter_pk primary key (id);
+
+alter table configured_parameter add constraint configured_parameter_uk_logic unique (process_parameter_id, activity_id, parameter_value);
+
+alter table configured_parameter add constraint configured_parameter_fk_param foreign key (process_parameter_id) references process_parameter (id);
+
+alter table configured_parameter add constraint configured_parameter_fk_activity foreign key (activity_id) references activity (id);
 
 
 
@@ -111,3 +131,5 @@ create sequence process_parameter_seq;
 create sequence schedule_seq;
 
 create sequence activity_seq;
+
+create sequence configured_parameter_seq;

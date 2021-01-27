@@ -1,9 +1,11 @@
 package com.rafpereira.scheduler.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  * Defines a schedule. The schedule aggregates the sequence of activities
@@ -12,6 +14,9 @@ import javax.persistence.ManyToOne;
  * @author rafaeldearaujopereira
  *
  */
+
+@Entity
+@Table(name = "schedule")
 public class Schedule {
 
 	/** Id of the schedule. */
