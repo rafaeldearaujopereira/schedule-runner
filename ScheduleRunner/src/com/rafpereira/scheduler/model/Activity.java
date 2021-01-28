@@ -18,8 +18,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import com.rafpereira.accesscontrol.model.Role;
-
 /**
  * An activity is a command (or a group of commands) set in a schedule. For
  * example, if a process is a "copy files to a directory", an activity will be:
