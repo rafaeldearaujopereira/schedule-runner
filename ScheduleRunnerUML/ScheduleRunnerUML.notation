@@ -485,7 +485,7 @@
     <element xmi:type="uml:Enumeration" href="ScheduleRunnerUML.uml#_vfDUQF5VEeuTWeG0CGc_KQ"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vfG-oF5VEeuTWeG0CGc_KQ" x="780" y="560" height="61"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_GRYAMF9AEeuTWeG0CGc_KQ" type="Class_Shape">
+  <children xmi:type="notation:Shape" xmi:id="_GRYAMF9AEeuTWeG0CGc_KQ" type="Class_Shape" fillColor="12632256">
     <children xmi:type="notation:DecorationNode" xmi:id="_GRYnQF9AEeuTWeG0CGc_KQ" type="Class_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_GRYnQV9AEeuTWeG0CGc_KQ" type="Class_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_GRYnQl9AEeuTWeG0CGc_KQ" y="15"/>
@@ -537,7 +537,7 @@
     <element xmi:type="uml:Enumeration" href="ScheduleRunnerUML.uml#_qhe8QF9AEeuTWeG0CGc_KQ"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qhgxcV9AEeuTWeG0CGc_KQ" x="980" y="380" width="423" height="67"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_fjWI0F9CEeuTWeG0CGc_KQ" type="Class_Shape">
+  <children xmi:type="notation:Shape" xmi:id="_fjWI0F9CEeuTWeG0CGc_KQ" type="Class_Shape" fillColor="12632256">
     <children xmi:type="notation:DecorationNode" xmi:id="_fjWI0l9CEeuTWeG0CGc_KQ" type="Class_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_fjWI019CEeuTWeG0CGc_KQ" type="Class_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_fjWv4F9CEeuTWeG0CGc_KQ" y="15"/>
