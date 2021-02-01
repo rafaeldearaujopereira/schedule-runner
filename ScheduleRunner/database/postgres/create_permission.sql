@@ -12,6 +12,6 @@ grant select, insert, update, delete on day_of_week to schedrunner_user;
 
 
 
-grant select on process_seq to schedrunner_user;
+grant usage, select on process_seq to schedrunner_user;
 
-grant select on process_parameter_seq to schedrunner_user;
+grant usage, select on process_parameter_seq to schedrunner_user;
