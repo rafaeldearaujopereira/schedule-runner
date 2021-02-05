@@ -2,9 +2,12 @@ package com.rafpereira.scheduler.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -22,6 +25,8 @@ public class Schedule {
 	/** Id of the schedule. */
 	@Id
 	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "scheduleSeqGen")
+	@SequenceGenerator(name = "scheduleSeqGen", allocationSize = 1, sequenceName = "schedule_seq")
 	private Long id;
 
 	/** Name of the schedule. */
@@ -47,7 +52,7 @@ public class Schedule {
 	 * control runs in another database.
 	 * That relationship will always happens through a map of the foreign object.
 	 */
-	@Column(name = "roleId")
+	@Column(name = "role_id")
 	private Long roleId;
 
 	/** The type of ownership of a given schedule. */
