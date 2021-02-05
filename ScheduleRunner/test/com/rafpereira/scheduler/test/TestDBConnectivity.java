@@ -21,17 +21,17 @@ public class TestDBConnectivity {
 		SessionFactoryUtil accessControlSessionFactory = new AccessControlSessionFactoryUtil();
 
 		ScheduleOwnershipUtil soUtil = new ScheduleOwnershipUtil();
-		for (ScheduleOwnership so : soUtil.listByFilter(null)) {
+		for (ScheduleOwnership so : soUtil.list()) {
 			System.out.println(so.getId() + " " + so.getDescription());
 		}
 
 		ProcessTypeUtil ptUtil = new ProcessTypeUtil();
-		for (ProcessType pt : ptUtil.listByFilter(null)) {
+		for (ProcessType pt : ptUtil.list()) {
 			System.out.println(pt.getId() + " " + pt.getDescription());
 		}
 
 		DayOfWeekUtil dowUtil = new DayOfWeekUtil();
-		for (DayOfWeek dow : dowUtil.listByFilter(null)) {
+		for (DayOfWeek dow : dowUtil.list()) {
 			System.out.println(dow.getId() + " " + dow.getDescription());
 		}
 		
@@ -40,12 +40,12 @@ public class TestDBConnectivity {
 		
 		
 		FeatureTypeUtil ftUtil = new FeatureTypeUtil();
-		for (FeatureType ft : ftUtil.listByFilter(null)) {
+		for (FeatureType ft : ftUtil.list()) {
 			System.out.println(ft.getId() + " " + ft.getDescription());
 		}
 
 		EventTypeUtil etUtil = new EventTypeUtil();
-		for (EventType et : etUtil.listByFilter(null)) {
+		for (EventType et : etUtil.list()) {
 			System.out.println(et.getId() + " " + et.getDescription());
 		}
 
