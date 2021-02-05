@@ -66,8 +66,6 @@ alter table day_of_week add constraint day_of_week_uk_desc unique (description);
 
 
 
-
-
 create table schedule (
 id bigint not null,
 schedule_ownership_id smallint not null,
