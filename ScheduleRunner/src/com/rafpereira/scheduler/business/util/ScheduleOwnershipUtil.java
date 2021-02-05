@@ -12,6 +12,10 @@ import com.rafpereira.data.util.SessionFactoryUtil;
 import com.rafpereira.scheduler.data.util.SchedulerSessionFactoryUtil;
 import com.rafpereira.scheduler.model.ScheduleOwnership;
 
+/**
+ * The CRUD Util class for Schedule Ownership.
+ * @author rafaeldearaujopereira
+ */
 public class ScheduleOwnershipUtil extends CrudAccessControlUtil<ScheduleOwnership> {
 
 	@Override
@@ -45,6 +49,22 @@ public class ScheduleOwnershipUtil extends CrudAccessControlUtil<ScheduleOwnersh
 	@Override
 	public SessionFactoryUtil getSessionFactoryInstance() {
 		return SchedulerSessionFactoryUtil.getInstance();
+	}
+	
+	/**
+	 * Disable the save method.
+	 */
+	@Override
+	public boolean save(ScheduleOwnership t) {
+		return false;
+	}
+
+	/**
+	 * Disable the remove method.
+	 */
+	@Override
+	public boolean remove(ScheduleOwnership t) {
+		return false;
 	}
 
 }

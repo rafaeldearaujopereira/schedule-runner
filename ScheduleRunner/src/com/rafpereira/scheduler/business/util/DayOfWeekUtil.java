@@ -12,6 +12,10 @@ import com.rafpereira.data.util.SessionFactoryUtil;
 import com.rafpereira.scheduler.data.util.SchedulerSessionFactoryUtil;
 import com.rafpereira.scheduler.model.DayOfWeek;
 
+/**
+ * The CRUD Util class for Day Of Week (search only).
+ * @author rafaeldearaujopereira
+ */
 public class DayOfWeekUtil extends CrudAccessControlUtil<DayOfWeek> {
 
 	@Override
@@ -50,5 +54,23 @@ public class DayOfWeekUtil extends CrudAccessControlUtil<DayOfWeek> {
 	public SessionFactoryUtil getSessionFactoryInstance() {
 		return SchedulerSessionFactoryUtil.getInstance();
 	}
+
+	/**
+	 * Disable the save method.
+	 */
+	@Override
+	public boolean save(DayOfWeek t) {
+		return false;
+	}
+
+	/**
+	 * Disable the remove method.
+	 */
+	@Override
+	public boolean remove(DayOfWeek t) {
+		return false;
+	}
+	
+	
 
 }
