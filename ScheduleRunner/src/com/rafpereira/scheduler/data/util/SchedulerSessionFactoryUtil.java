@@ -53,7 +53,7 @@ public class SchedulerSessionFactoryUtil extends SessionFactoryUtil {
 	@Override
 	public Configuration getConfiguration() {
 		Configuration config = new Configuration();
-		config.configure("/com/rafpereira/scheduler/config/hibernate.cfg.xml");
+		config.configure("classpath:/com/rafpereira/scheduler/config/hibernate.cfg.xml");
 		config.addAnnotatedClass(ScheduleOwnership.class);
 		config.addAnnotatedClass(ProcessType.class);
 		config.addAnnotatedClass(Process.class);
