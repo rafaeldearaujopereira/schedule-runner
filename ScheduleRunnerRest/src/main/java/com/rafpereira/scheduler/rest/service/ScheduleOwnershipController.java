@@ -4,9 +4,9 @@ import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rafpereira.accesscontrol.base.rest.service.CrudController;
 import com.rafpereira.accesscontrol.business.util.CrudAccessControlUtil;
 import com.rafpereira.accesscontrol.rest.auth.api.UserAuthenticationService;
-import com.rafpereira.accesscontrol.rest.service.CrudController;
 import com.rafpereira.scheduler.business.util.ScheduleOwnershipUtil;
 import com.rafpereira.scheduler.model.ScheduleOwnership;
 

@@ -39,9 +39,10 @@
 		
 		<dependency>
 			<groupId>com.rafpereira</groupId>
-			<artifactId>simple-sox-access-control-rest</artifactId>
+			<artifactId>simple-sox-access-control-base-rest</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.rafpereira</groupId>
 			<artifactId>schedule-runner</artifactId>
